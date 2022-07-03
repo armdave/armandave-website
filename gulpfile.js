@@ -6,8 +6,6 @@ const wait = require('gulp-wait');
 const babel = require('gulp-babel');;
 const rename = require('gulp-rename');
 
-// gulp.task("build", ["scripts", "styles"]);
-
 function javascript () {
     return gulp.src('./js/scripts.js')
         .pipe(plumber(plumber({
@@ -36,8 +34,3 @@ function css() {
 };
 
 exports.default = gulp.parallel(javascript, css);
-
-// gulp.task('watch', function() {
-//     gulp.watch('./js/scripts.js', gulp.series('scripts'));
-//     gulp.watch('./scss/styles.scss', gulp.series('styles'));
-// });
