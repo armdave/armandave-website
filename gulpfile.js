@@ -35,7 +35,7 @@ function css() {
         .pipe(gulp.dest('./dist'));
 };
 
-exports.default = gulp.parallel(javascript, css);
+exports.default = gulp.series(javascript, css);
 
 // gulp.task('watch', function() {
 //     gulp.watch('./js/scripts.js', gulp.series('scripts'));
