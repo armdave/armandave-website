@@ -25,14 +25,14 @@ function javascript () {
             }
         }))
         .pipe(rename({extname: '.min.js'}))
-        .pipe(gulp.dest('./js'));
+        .pipe(gulp.dest('./dist'));
 };
 
 function css() {
     return gulp.src('./scss/styles.scss')
         .pipe(wait(250))
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./dist'));
 };
 
 exports.default = gulp.parallel(javascript, css);
