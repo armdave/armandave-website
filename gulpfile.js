@@ -35,7 +35,7 @@ function css() {
 
 exports.default = gulp.parallel(javascript, css);
 
-//---------- TESTING
+// ---------- TESTING
 
 // var gulp = require('gulp');
 // var plumber = require('gulp-plumber');
